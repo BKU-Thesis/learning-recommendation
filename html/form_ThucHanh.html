@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form khảo sát phần thực hành</title>
+    <link rel="stylesheet" href="../assets/style.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -18,12 +19,47 @@
 
         <div class="get-info">
             <h2 style="text-align: center;">PHIẾU KHẢO SÁT SINH VIÊN VỀ HỌC PHẦN THỰC HÀNH</h2>
+
             <div>
                 <P style=" font-size: larger;">
                     Nhằm nâng cao chất lượng dạy và học, Nhà trường rất mong nhận được ý kiến của các bạn sinh viên về học phần thực hành. Ý kiến của các bạn sinh viên sẽ giúp Nhà trường đưa ra được các giải pháp nâng cao chất lượng dạy và học. Thông tin trả lời của các
                     bạn sẽ được giữ kín, vì vậy các bạn vui lòng trả lời thẳng thắn và khách quan các câu hỏi. Nếu các bạn có thắc mắc hoặc trao đổi, vui lòng liên hệ theo địa chỉ ở cuối bảng hỏi này.
                 </P>
 
+                <h3>
+                    Phần 1: Thông tin chung
+                </h3>
+                <!-- form -->
+                <form>
+                    <div class="new_user">
+                        <div class="form-group">
+                            <label for="name" class="text-light">1. Tên giảng viên:</label> <br>
+                            <input type="hidden" name="id" value="">
+                            <input type="text" name="name" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="khoa" class="text-light">2. Khoa/Viện:</label> <br>
+                            <input type="text" name="khoa" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="monhoc" class="text-light">3. Môn học/Học phần:</label> <br>
+                            <input type="text" name="monhoc" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="hocphan" class="text-light">4. Lớp học phần:</label>
+                            <input class="tab-subject" type="text" name="hocphan" value="">
+
+
+                            <label for="hocky" class="text-light">Học kỳ:</label>
+                            <input class="tab-subject" type="text" name="email" value="">
+                            <label for="namhoc" class="text-light">Năm học:</label>
+                            <input type="text" name="namhoc" value="">
+                        </div>
+                        <div class="form-group inline">
+
+                        </div>
+                    </div>
+                </form>
                 <div>
                     <h3>
                         Ý KIẾN CỦA SINH VIÊN
