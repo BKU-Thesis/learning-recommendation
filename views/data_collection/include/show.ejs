@@ -1,0 +1,19 @@
+<% for(var i = 0; i < authors.length; i++) { %>
+<tr>
+    <td><%= i + 1 %></td>
+    <td><%= authors[i].teacher %></td>
+    <td><%= authors[i].faculty %></td>
+    <td><%= authors[i].subject %></td>
+    <td><%= authors[i].classroom_section %></td>
+    <td><%= authors[i].semester %></td>
+    <td><%= authors[i].school_year %></td>
+    <td>
+        <a href="/author/update-author?id=<%= authors[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id=<%= authors[i]._id%> >
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form khảo sát phần lý thuyết</title>
+    <link rel="stylesheet" href="../../assets/css/dataCollectStyle.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="get-info">
+
+            <h2 style="text-align: center;">PHIẾU KHẢO SÁT SINH VIÊN VỀ HỌC PHẦN LÝ THUYẾT</h2>
+            <div>
+                <P style=" font-size: larger;">
+                    Nhằm nâng cao chất lượng dạy và học, Nhà trường rất mong nhận được ý kiến của các bạn sinh viên về
+                    học phần lý thuyết. Ý kiến của các bạn sinh viên sẽ giúp Nhà trường đưa ra được các giải pháp nâng
+                    cao chất lượng dạy và học. Thông tin trả lời của các
+                    bạn sẽ được giữ kín, vì vậy các bạn vui lòng trả lời thẳng thắn và khách quan các câu hỏi. Nếu các
+                    bạn có thắc mắc hoặc trao đổi, vui lòng liên hệ theo địa chỉ ở cuối bảng hỏi này.
+                </P>
+                <div>
+                    <h3>
+                        Phần 1: Thông tin chung
+                    </h3>
+                    <!-- form -->
+                    <%- include('include/user_form') %>
+
+                </div>
+                <div>
+                    <h3>
+                        Phần 2: Ý KIẾN CỦA SINH VIÊN
+                    </h3>
+                    <p>
+                        Các bạn vui lòng khoanh tròn vào ô trả lời với sự lựa chọn thích hợp, tương ứng với từng mức độ
+                        đánh giá.
+                    </p>
+
+                    <p>
+                        1. Hoàn toàn không đồng ý <br> 2. Không đồng ý <br> 3. Phân vân <br> 4. Đồng ý <br> 5. Hoàn toàn
+                        đồng ý <br>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+            <div class="below-table">
+                <h4><b> V. Ý kiến khác </b></h4>
+
+                <p style="text-align: center; padding: 70px 0;"><b>Xin chân thành cảm ơn sự hợp tác của các bạn!</b></p>
+
+            </div>
+    </div>
+    <!-- end container -->
+
+</body>
+
+</html>
