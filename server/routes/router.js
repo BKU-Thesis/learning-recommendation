@@ -26,7 +26,7 @@ route.get('/update-user', services.update_user);
 route.get('/author/create', controller.author_create_get);
 route.post('/author/create', controller.author_create_post);
 route.get('/authors', controller.get_authors);
-route.get('/author/update_author', services.update_author);
+route.get('/author/update-author', services.update_author);
 
 
 // API

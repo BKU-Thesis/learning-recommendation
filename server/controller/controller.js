@@ -129,7 +129,6 @@ exports.author_create_post = [
         author
             .save(author)
             .then(data => {
-                //res.send(data)
                 res.send(req.body);
             })
             .catch(err => {
