@@ -33,7 +33,8 @@
                         Phần 1: Thông tin chung
                     </h3>
                     <!-- form -->
-                    <form class="new_user" method="POST" action="" id="update_author">
+                    <form class="new_user" method="POST" id="update_author">
+                        <input type="hidden" name="id" value="<%= author._id %>">
                         <div>
                             <div class="form-group">
                                 <label for="name" class="text-light">1. Tên giảng viên:</label> <br>
@@ -57,16 +58,16 @@
                                 <input type="text" name="school_year" value="<%= author.school_year %>">
                             </div>
                             <div class="form-group inline">
-                                <input type = "submit" value="Submit">
+                                <input id="btn-submit" type = "button" value="Submit">
                             </div>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
     </div>
     <!-- end container -->
+    <script src="/js/index.js"></script>
 
 </body>
 

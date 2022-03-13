@@ -71,6 +71,7 @@ exports.update = (req, res) => {
     }
 
     const id = req.params.id;
+    console.log('id = ' + id);
     Userdb.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
         .then(data => {
             if (!data) {
@@ -78,6 +79,7 @@ exports.update = (req, res) => {
             } else {
                 res.send(data)
             }
+            console.log('data = ' + data)
         })
         .catch(err => {
             res.status(500).send({ message: "Error Update user information" })
@@ -191,6 +193,7 @@ exports.update_author = (req, res) => {
     }
 
     const id = req.params.id;
+    console.log('Update author id = ' + id)
     Author.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
         .then(data => {
             if (!data) {

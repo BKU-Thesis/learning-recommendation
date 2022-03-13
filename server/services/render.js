@@ -29,7 +29,7 @@ exports.update_user = (req, res) => {
 exports.update_author = (req, res) => {
     axios.get('http://localhost:3000/api/authors', { params: { id: req.query.id } })
         .then(function (userdata) {
-            console.log(userdata)
+            console.log( userdata.data);
             res.render("data_collection/update_author", { author: userdata.data })
         })
         .catch(err => {

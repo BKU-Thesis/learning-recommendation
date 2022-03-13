@@ -12,6 +12,9 @@ $("#update_user").submit(function(event){
         data[n['name']] = n['value']
     })
 
+    console.log('data = ')
+    console.log(data)
+
 
     var request = {
         "url" : `http://localhost:3000/api/users/${data.id}`,
@@ -51,15 +54,21 @@ $("#create_author").submit(function(event){
 })
 
 
-$("#update_author").submit(function(event){
+
+
+$("#btn-submit").on('click', function(event){
+    console.log('Update Author: Entry')
+    var form = $("#update_author")
     event.preventDefault();
 
-    var unindexed_array = $(this).serializeArray();
+    var unindexed_array = form.serializeArray();
     var data = {}
 
     $.map(unindexed_array, function(n, i){
         data[n['name']] = n['value']
     })
+
+    console.log(data);
 
 
     var request = {
@@ -70,12 +79,15 @@ $("#update_author").submit(function(event){
 
     $.ajax(request).done(function(response){
         alert("Data Updated Successfully!");
+        setTimeout(function() {
+            window.location.reload();
+        }, 1000);
+       
     })
-
 })
 
 
-if(window.location.pathname == "/author"){
+if(window.location.pathname == "/authors"){
     $ondelete = $(".table tbody td a.delete");
     $ondelete.click(function(){
         var id = $(this).attr("data-id")
@@ -94,4 +106,3 @@ if(window.location.pathname == "/author"){
 
     })
 }
-
