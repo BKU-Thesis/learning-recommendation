@@ -109,7 +109,11 @@ exports.delete = (req, res) => {
 
 // Display Author create form on GET.
 exports.author_create_get = function (req, res, next) {
-    res.render('data_collection/create_author', { title: 'Create Author' });
+    res.render('data_collection/data/home_input_infor', { title: 'Create Author' });
+};
+
+exports.author_create_get_2 = function (req, res, next) {
+    res.render('data_collection/data/home_input_infor_nextpage', { title: 'Create Author 2' });
 };
 
 // Handle Author create on POST.
