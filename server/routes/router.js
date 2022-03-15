@@ -8,7 +8,8 @@ const controller = require('../controller/controller');
  *  @description Root Route
  *  @method GET /
  */
-route.get('/', services.homeRoutes);
+// route.get('/', services.homeRoutes);
+route.get('/', services.homeRoutes)
 
 /**
  *  @description add users
@@ -25,6 +26,7 @@ route.get('/update-user', services.update_user);
 
 route.get('/author/create', controller.author_create_get);
 route.post('/author/create', controller.author_create_post);
+route.get('/author/create2', controller.author_create_get_2);
 route.get('/authors', controller.get_authors);
 route.get('/author/update-author', services.update_author);
 

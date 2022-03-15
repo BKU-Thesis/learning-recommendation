@@ -54,8 +54,6 @@ $("#create_author").submit(function(event){
 })
 
 
-
-
 $("#btn-submit").on('click', function(event){
     console.log('Update Author: Entry')
     var form = $("#update_author")

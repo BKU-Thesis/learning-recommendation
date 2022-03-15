@@ -36,3 +36,7 @@ exports.update_author = (req, res) => {
             res.send(err);
         })
 }
+
+exports.index = (req, res) => {
+    res.render("data_collection/data/home_input_infor")
+}
