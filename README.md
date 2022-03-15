@@ -6,5 +6,6 @@
 - [Nguyen Van Sy](https://github.com/synguyen1999)
 
 ## How to run the application?
-Create config.env file and create PORT and MONGO_URI variables and specify value. You are ready to go. To execute this project just type:
+* Checkout the dev branch
+* To execute this project just type:
 > npm start
