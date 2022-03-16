@@ -26,7 +26,7 @@ exports.update_user = (req, res) => {
         })
 }
 
-exports.update_author = (req, res) => {
+exports.update_user = (req, res) => {
     axios.get('http://localhost:3000/api/authors', { params: { id: req.query.id } })
         .then(function (userdata) {
             console.log( userdata.data);
