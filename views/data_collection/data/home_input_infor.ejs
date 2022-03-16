@@ -33,33 +33,33 @@
                         Phần 1: Thông tin chung
                     </h3>
                     <!-- form -->
-                    <form action="next_page">
+                    <form action="/users" id="submit-signup-user">
                         <div class="new_user">
                             <div class="form-group">
                                 <label for="name" class="text-light">1. Tên giảng viên:</label> <br>
                                 <input type="hidden" name="id" value="">
-                                <input type="text" name="name" value="">
+                                <input type="text" name="name" value="" id="text-teacher-input">
                             </div>
                             <div class="form-group">
                                 <label for="khoa" class="text-light">2. Khoa/Viện:</label> <br>
-                                <input type="text" name="khoa" value="">
+                                <input type="text" name="khoa" value="" id="text-faculty-input">
                             </div>
                             <div class="form-group">
                                 <label for="monhoc" class="text-light">3. Môn học/Học phần:</label> <br>
-                                <input type="text" name="monhoc" value="">
+                                <input type="text" name="monhoc" value="" id="text-subject-input">
                             </div>
                             <div class="form-group">
                                 <label for="hocphan" class="text-light">4. Lớp học phần:</label>
-                                <input class="tab-subject" type="text" name="hocphan" value="">
-
+                                <input class="tab-subject" type="text" name="hocphan" value="" id="text-classroom-section-input">
 
                                 <label for="hocky" class="text-light">Học kỳ:</label>
-                                <input class="tab-subject" type="text" name="email" value="">
+                                <input class="tab-subject" type="text" name="email" value="" id="text-semester-input">
+                                
                                 <label for="namhoc" class="text-light">Năm học:</label>
-                                <input type="text" name="namhoc" value="">
+                                <input type="text" name="namhoc" value="" id="text-school-year-input">
                             </div>
                             <div>
-                                <input type="button" name="btnNextPage" value="Next">
+                                <input id="btn-submit-signup-user" type="button" name="btnNextPage" value="Next">
                             </div>
                         </div>
                     </form>
@@ -67,6 +67,9 @@
             </div>
         </div>
     </div>
+
+    <script src="/js/index.js"></script>
+
 </body>
 
 </html>

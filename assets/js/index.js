@@ -3,8 +3,7 @@ $("#create_user").submit(function(event){
 })
 
 
-$("#btn-submit").on('click', function(event){
-    console.log('Update Author: Entry')
+$("#btn-submit-update").on('click', function(event){
     var form = $("#update_user")
     event.preventDefault();
 
@@ -53,3 +52,14 @@ if(window.location.pathname == "/users"){
 
     })
 }
+
+
+$("#btn-submit-signup-user").on('click', function(event){
+    console.log('btn-submit-signup-user: ENTRY');
+    console.log('teacher: ', $("#text-teacher-input").val());
+    console.log('faculty: ', $("#text-faculty-input").val());
+    console.log('subject: ', $("#text-subject-input").val());
+    console.log('classroom-section: ', $("#text-classroom-section-input").val());
+    console.log('semester: ', $("#text-semester-input").val());
+    console.log('school-year: ', $("#text-school-year-input").val());
+})
