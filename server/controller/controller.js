@@ -1,5 +1,4 @@
-var Userdb = require('../model/user');
-var Author = require('../../models/author')
+var User = require('../model/user')
 const axios = require('axios');
 
 
@@ -15,9 +14,9 @@ exports.user_create_get_2 = function (req, res, next) {
 // Handle Author create on POST.
 exports.user_create_post = [
     (req, res, next) => {
-        console.log('Author Create Post');
+        console.log('User Create Post');
         // Create an Author object with escaped and trimmed data.
-        var author = new Author(
+        var user = new User(
             {
                 teacher: req.body.teacher,
                 faculty: req.body.faculty,
@@ -28,8 +27,8 @@ exports.user_create_post = [
             });
 
         // save user in the database
-        author
-            .save(author)
+        user
+            .save(user)
             .then(data => {
                 res.send(req.body);
             })
@@ -39,12 +38,12 @@ exports.user_create_post = [
                     message: err.message || "Some error occurred while creating a create operation"
                 });
             });
-        console.log(author);
+        console.log(user);
     }
 ];
 
 exports.get_users = (req, res) => {
-    // Make a get request to /api/authors
+    // Make a get request to /api/users
     axios.get('http://localhost:3000/api/users')
         .then(function (response) {
             res.render('data_collection/index', { users: response.data });
@@ -61,7 +60,7 @@ exports.find_users = (req, res) => {
     if (req.query.id) {
         const id = req.query.id;
 
-        Author.findById(id)
+        User.findById(id)
             .then(data => {
                 if (!data) {
                     res.status(404).send({ message: "Not found user with id " + id })
@@ -74,7 +73,7 @@ exports.find_users = (req, res) => {
             })
 
     } else {
-        Author.find()
+        User.find()
             .then(user => {
                 res.send(user)
             })
@@ -93,8 +92,8 @@ exports.update_user = (req, res) => {
     }
 
     const id = req.params.id;
-    console.log('Update author id = ' + id)
-    Author.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+    console.log('Update user id = ' + id)
+    User.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
         .then(data => {
             if (!data) {
                 res.status(404).send({ message: `Cannot Update user with ${id}. Maybe user not found!` })
@@ -111,7 +110,7 @@ exports.update_user = (req, res) => {
 exports.delete_user = (req, res) => {
     const id = req.params.id;
 
-    Author.findByIdAndDelete(id)
+    User.findByIdAndDelete(id)
         .then(data => {
             if (!data) {
                 res.status(404).send({ message: `Cannot Delete with id ${id}. Maybe id is wrong` })

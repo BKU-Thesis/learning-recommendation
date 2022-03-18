@@ -26,16 +26,11 @@ exports.update_user = (req, res) => {
         })
 }
 
-exports.update_user = (req, res) => {
-    axios.get('http://localhost:3000/api/authors', { params: { id: req.query.id } })
-        .then(function (userdata) {
-            console.log( userdata.data);
-            res.render("data_collection/update_author", { author: userdata.data })
-        })
-        .catch(err => {
-            res.send(err);
-        })
+
+exports.collect_data = (req, res) => {
+    res.render("data_collection/data/home_input_infor_nextpage")
 }
+
 
 exports.index = (req, res) => {
     res.render("data_collection/data/home_input_infor")

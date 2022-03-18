@@ -7,8 +7,8 @@ const controller = require('../controller/controller');
 
 route.get('/user/create', controller.user_create_get);
 route.post('/user/create', controller.user_create_post);
-route.get('/user/create2', controller.user_create_get_2);
-route.get('/users', controller.get_users);
+route.get('/user/create2', services.collect_data);
+route.get('/', controller.get_users);
 
 /**
  *  @description for update user
