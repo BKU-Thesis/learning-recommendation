@@ -8,6 +8,7 @@ $("#btn-submit-update").on('click', function (event) {
     var form = $("#update_user")
     event.preventDefault();
 
+    console.log("clicked1")
     var unindexed_array = form.serializeArray();
     var data = {}
 
@@ -53,28 +54,38 @@ if (window.location.pathname == "/users") {
     })
 }
 
-$("#btn-submit-signup-user").on('click', function (event) {
-    var form = $("#submit-signup-user")
-    event.preventDefault();
+$("#btn-next-family").on('click', function (event) {
+    // var form = $("#submit-personal-information")
+    // event.preventDefault();
 
     //Get all data input in FORM
-    var unindexed_array = form.serializeArray();
-    var data = {}
-    $.map(unindexed_array, function (n, i) {
-        data[n['name']] = n['value']
-    })
+    // var unindexed_array = form.serializeArray();
+    // var data = {}
+    // $.map(unindexed_array, function (n, i) {
+    //     data[n['name']] = n['value']
+    // })
 
-    // var request = {
-    //     "url": `http://localhost:3000/api/users`,
-    //     "method": "GET"
-    // }
+    // var res = $("#submit-personal-information").serialize()
 
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:3000',
-        success: function(data) {
-          alert("success");
+        url: 'family',
+        success: function () {
+            // $('#input_1').html(data);
+            location.href = 'family'
         }
-      });
+    });
+})
 
+$("#btn-next-mearsurement").on('click', function () {
+    // event.preventDefault();
+
+    $.ajax({
+        type: 'GET',
+        url: 'measure',
+        success: function () {
+            // $('#input_1').html(data);
+            location.href = 'measure'
+        }
+    });
 })

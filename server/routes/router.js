@@ -5,10 +5,12 @@ const services = require('../services/render');
 const controller = require('../controller/controller');
 
 
-route.get('/user/create', controller.user_create_get);
-route.post('/user/create', controller.user_create_post);
-route.get('/user/create2', services.collect_data);
+route.get('/infor/personal', controller.infor_personal_get);
+route.get('/infor/family', controller.infor_family_get)
+route.get('/infor/measure', controller.infor_measure_get);
 route.get('/', controller.get_users);
+
+route.post('/infor/personal', controller.infor_personal_post);
 
 /**
  *  @description for update user

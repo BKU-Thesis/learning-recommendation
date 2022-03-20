@@ -3,16 +3,20 @@ const axios = require('axios');
 
 
 // Display Author create form on GET.
-exports.user_create_get = function (req, res, next) {
-    res.render('data_collection/data/home_input_infor', { title: 'Create User' });
+exports.infor_personal_get = function (req, res, next) {
+    res.render('data_collection/data/input_infor_personal', { title: 'Personal Information' });
 };
 
-exports.user_create_get_2 = function (req, res, next) {
-    res.render('data_collection/data/home_input_infor_nextpage', { title: 'Create User 2' });
+exports.infor_family_get = function (req, res, next) {
+    res.render('data_collection/data/input_infor_family', {title: "Family Information"})
+}
+
+exports.infor_measure_get = function (req, res, next) {
+    res.render('data_collection/data/input_infor_measure', { title: 'Measurement Information' });
 };
 
 // Handle Author create on POST.
-exports.user_create_post = [
+exports.infor_personal_post = [
     (req, res, next) => {
         console.log('User Create Post');
         // Create an Author object with escaped and trimmed data.
