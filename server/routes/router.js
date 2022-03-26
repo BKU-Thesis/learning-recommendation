@@ -4,43 +4,23 @@ const route = express.Router()
 const services = require('../services/render');
 const controller = require('../controller/controller');
 
-/**
- *  @description Root Route
- *  @method GET /
- */
-// route.get('/', services.homeRoutes);
-route.get('/', services.homeRoutes)
 
-/**
- *  @description add users
- *  @method GET /add-user
- */
-route.get('/add-user', services.add_user)
+route.get('/infor/personal', controller.infor_personal_get);
+route.get('/infor/family', controller.infor_family_get)
+route.get('/infor/measure', controller.infor_measure_get);
+route.get('/', controller.get_users);
+
+route.post('/infor/personal', controller.infor_personal_post);
 
 /**
  *  @description for update user
  *  @method GET /update-user
  */
-route.get('/update-user', services.update_user);
-
-
-route.get('/author/create', controller.author_create_get);
-route.post('/author/create', controller.author_create_post);
-route.get('/author/create2', controller.author_create_get_2);
-route.get('/authors', controller.get_authors);
-route.get('/author/update-author', services.update_author);
-
+route.get('/user/update-user', services.update_user);
 
 // API
-route.get('/api/authors', controller.find_authors);
-route.put('/api/authors/:id', controller.update_author);
-route.delete('/api/authors/:id', controller.delete_author);
-
-
-// API
-route.post('/api/users', controller.create);
-route.get('/api/users', controller.find);
-route.put('/api/users/:id', controller.update);
-route.delete('/api/users/:id', controller.delete);
+route.get('/api/users', controller.find_users);
+route.put('/api/users/:id', controller.update_user);
+route.delete('/api/users/:id', controller.delete_user);
 
 module.exports = route
