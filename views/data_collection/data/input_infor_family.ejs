@@ -20,17 +20,17 @@
             <h3>
                 Part 2: Family information
             </h3>
-            <form id="submit-family-information">
+            <form id="submit-family-information" method="post">
                 <div class="form-row col-md-12">1.Family size</div>
                 <div class="form-row">
                     <div class="form-group col-md-2">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1">
+                        <input class="form-check-input" type="radio" name="famsize" id="inlineRadio1"
+                            value="LE3">
                         <label class="form-check-label" for="inlineRadio1">Less or equal to 3</label>
                     </div>
                     <div class="form-group col-md-2">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
+                        <input class="form-check-input" type="radio" name="famsize" id="inlineRadio2"
+                            value="GT3">
                         <label class="form-check-label" for="inlineRadio2">Greater than 3</label>
                     </div>
                 </div>
@@ -38,13 +38,13 @@
                 <div class="form-row col-md-12">2.Parent's cohabitation status</div>
                 <div class="form-row">
                     <div class="form-group col-md-2">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1">
+                        <input class="form-check-input" type="radio" name="pstatus" id="inlineRadio1"
+                            value="T">
                         <label class="form-check-label" for="inlineRadio1">Living together</label>
                     </div>
                     <div class="form-group col-md-2">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
+                        <input class="form-check-input" type="radio" name="pstatus" id="inlineRadio2"
+                            value="A">
                         <label class="form-check-label" for="inlineRadio2">Apart</label>
                     </div>
                 </div>
@@ -52,23 +52,28 @@
                 <div class="form-row col-md-12">3.Mother's education</div>
                 <div class="form-row">
                     <div class="form-group col-md-2">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1">
+                        <input class="form-check-input" type="radio" name="medu" id="inlineRadio1"
+                            value="0">
                         <label class="form-check-label" for="inlineRadio1">None</label>
                     </div>
-                    <div class="form-group col-md-3">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Primary education (5th grade)</label>
+                    <div class="form-group col-md-2">
+                        <input class="form-check-input" type="radio" name="medu" id="inlineRadio2"
+                            value="1">
+                        <label class="form-check-label" for="inlineRadio2">5th grade</label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <input class="form-check-input" type="radio" name="medu" id="inlineRadio2"
+                            value="1">
+                        <label class="form-check-label" for="inlineRadio2">6th - 9th grade</label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <input class="form-check-input" type="radio" name="medu" id="inlineRadio2"
+                            value="3">
+                        <label class="form-check-label" for="inlineRadio2">10th - 12th grade</label>
                     </div>
                     <div class="form-group col-md-4">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Secondary education (6th - 9th grade)</label>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
+                        <input class="form-check-input" type="radio" name="medu" id="inlineRadio2"
+                            value="4">
                         <label class="form-check-label" for="inlineRadio2">Higher education</label>
                     </div>
                 </div>
@@ -76,30 +81,35 @@
                 <div class="form-row col-md-12">4.Father's education</div>
                 <div class="form-row">
                     <div class="form-group col-md-2">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1">
-                        <label class="form-check-label" for="inlineRadio1">None</label>
+                        <input class="form-check-input" type="radio" name="fedu" id="inlineRadio0"
+                            value="0">
+                        <label class="form-check-label" for="inlineRadio0">None</label>
                     </div>
-                    <div class="form-group col-md-3">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Primary education (5th grade)</label>
+                    <div class="form-group col-md-2">
+                        <input class="form-check-input" type="radio" name="fedu" id="inlineRadio1"
+                            value="1">
+                        <label class="form-check-label" for="inlineRadio1">5th grade</label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <input class="form-check-input" type="radio" name="fedu" id="inlineRadio2"
+                            value="1">
+                        <label class="form-check-label" for="inlineRadio2">6th - 9th grade</label>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <input class="form-check-input" type="radio" name="fedu" id="inlineRadio3"
+                            value="3">
+                        <label class="form-check-label" for="inlineRadio3">10th - 12th grade</label>
                     </div>
                     <div class="form-group col-md-4">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Secondary education (6th - 9th grade)</label>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Higher education</label>
+                        <input class="form-check-input" type="radio" name="fedu" id="inlineRadio4"
+                            value="4">
+                        <label class="form-check-label" for="inlineRadio4">Higher education</label>
                     </div>
                 </div>
 
                 <div class="form-group row col-md-12">
                     <label for="inputState" class="col-md-2">5.Mother's job</label>
-                    <select id="inputState" class="col-md-3">
+                    <select id="inputState" class="col-md-3" name="mjob">
                         <option>Teacher</option>
                         <option>Health care related</option>
                         <option selected>Civil services (e.g. Administrative or policy)</option>
@@ -110,7 +120,7 @@
 
                 <div class="form-group row col-md-12">
                     <label for="inputState" class="col-md-2">6.Father's job</label>
-                    <select id="inputState" class="col-md-3">
+                    <select id="inputState" class="col-md-3" name="fjob">
                         <option>Teacher</option>
                         <option>Health care related</option>
                         <option selected>Civil services (e.g. Administrative or policy)</option>
@@ -122,18 +132,18 @@
                 <div class="form-row col-md-12">7.Guardian</div>
                 <div class="form-row">
                     <div class="form-group col-md-2">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1">
+                        <input class="form-check-input" type="radio" name="guardian" id="inlineRadio1"
+                            value="mother">
                         <label class="form-check-label" for="inlineRadio1">Mother</label>
                     </div>
                     <div class="form-group col-md-3">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
+                        <input class="form-check-input" type="radio" name="guardian " id="inlineRadio2"
+                            value="father">
                         <label class="form-check-label" for="inlineRadio2">Father</label>
                     </div>
                     <div class="form-group col-md-7">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
+                        <input class="form-check-input" type="radio" name="guardian" id="inlineRadio2"
+                            value="other">
                         <label class="form-check-label" for="inlineRadio2">Other</label>
                     </div>
                 </div>

@@ -15,6 +15,10 @@ exports.infor_measure_get = function (req, res, next) {
     res.render('data_collection/data/input_infor_measure', { title: 'Measurement Information' });
 };
 
+exports.infor_grade_get = function(req, res, next) {
+    res.render('data_collection/data/input_infor_grade', {title: 'Grade Information'});
+}
+
 // Handle Author create on POST.
 exports.infor_personal_post = [
     (req, res, next) => {

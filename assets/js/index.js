@@ -1,4 +1,3 @@
-
 $("#create_user").submit(function (event) {
     alert("Data Inserted Successfully!");
 })
@@ -55,37 +54,28 @@ if (window.location.pathname == "/users") {
 }
 
 $("#btn-next-family").on('click', function (event) {
-    // var form = $("#submit-personal-information")
-    // event.preventDefault();
-
-    //Get all data input in FORM
-    // var unindexed_array = form.serializeArray();
-    // var data = {}
-    // $.map(unindexed_array, function (n, i) {
-    //     data[n['name']] = n['value']
-    // })
-
-    // var res = $("#submit-personal-information").serialize()
-
     $.ajax({
         type: 'GET',
-        url: 'family',
         success: function () {
-            // $('#input_1').html(data);
             location.href = 'family'
-        }
+        },
     });
 })
 
 $("#btn-next-mearsurement").on('click', function () {
-    // event.preventDefault();
-
     $.ajax({
         type: 'GET',
+        success: function () {
+            location.href = 'grade'
+        },
+    });
+})
+
+$("#btn-send").on('click', function () {
+    $.ajax({
         url: 'measure',
         success: function () {
-            // $('#input_1').html(data);
-            location.href = 'measure'
-        }
+            // TODO
+        },
     });
 })
